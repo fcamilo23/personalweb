@@ -26,11 +26,11 @@ function efectoHabilidades(){
         habilidades[2].classList.add("php");
         habilidades[3].classList.add("sql");
         habilidades[4].classList.add("java");
-        habilidades[5].classList.add("ingles");
-        habilidades[6].classList.add("trabajo");
-        habilidades[7].classList.add("creatividad");
-        habilidades[8].classList.add("dedicacion");
-        habilidades[9].classList.add("proyect");
+        habilidades[5].classList.add("trabajo");
+        habilidades[6].classList.add("creatividad");
+        habilidades[7].classList.add("dedicacion");
+        habilidades[8].classList.add("ingles");
+        habilidades[9].classList.add("portugues");
     }
 }
 

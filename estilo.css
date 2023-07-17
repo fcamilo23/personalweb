@@ -355,13 +355,13 @@ html{
     100%{width: 99%;}
 }
 
-.skills .skill .proyect{
+.skills .skill .portugues{
     width: 0%;
-    animation: 2s proyect forwards;
+    animation: 2s portugues forwards;
 }
-@keyframes proyect {
+@keyframes portugues {
     0%{width: 0%;}
-    100%{width: 94%;}
+    100%{width: 70%;}
 }
 /* SECCION CURRICULUM */
 .curriculum{
