@@ -17,10 +17,13 @@
             </div>
             <nav id="nav">
                 <ul>
-                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
-                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
-                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
-                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a id="ini" href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a id="sobmi" href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a id="sk" href="#skills" onclick="seleccionar()">HABILIDADES</a></li>
+                    <li><a id="res" href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><p onclick="changespanish()"><img style="width: 35px; height: 20px; cursor: pointer" src="img/españa.png" /></p></li>
+                    <li><p onclick="changenglish()"><img style="width: 35px; height: 19px; margin-left: 15px; cursor: pointer" src="img/uk.png" /></p></li>
+
                 </ul>
             </nav>
             <div class="nav-responsive" onclick="mostrarOcultarMenu()">
@@ -36,7 +39,7 @@
                 <img src="img/Facundo.png" alt="" style="border-radius: 100%">
             </div>
             <h1>Facundo Camilo</h1>
-            <h2>Tecnólogo en Informática</h2>
+            <h2 id="titulo">Tecnólogo en Informática</h2>
             <div class="redes">
                 <a href="https://www.linkedin.com/in/facundo-camilo-7189651b7/"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://github.com/fcamilo23/"><i class="fa-brands fa-github"></i></a>
@@ -47,14 +50,14 @@
     <!-- SECCION SOBRE MI -->
     <section id="sobremi" class="sobremi">
         <div class="contenido-seccion">
-            <h2>Sobre Mí</h2>
-            <p><span>Hola! Mi nombre es Facundo Camilo. </span>Soy Tecnólogo en Informática y actualmente estudiante de Ingeniería en Computación (FING). Trabajo desde agosto de 2023 como desarrollador web en el área TI de República Microfinanzas. Me gusta mucho todo lo que es el desarrollo de software, sobre todo web, tanto front-end como back-end y tengo un buen nivel de inglés. </p>
-            <p><span>Perfil de Tecnólogo en Informática: </span>"Los egresados de la carrera Tecnólogo en Informática serán capaces de construir y evaluar soluciones informáticas abarcando las tareas de diseño y desarrollo de software, pruebas y documentación, integrando eventualmente distintas tecnologías." </p>
+            <h2 id="aboutme">Sobre Mí</h2>
+            <p id="desc">Mi nombre es Facundo Camilo, soy Tecnólogo en Informática y actualmente estudiante de Ingeniería en Computación (FING). Trabajo desde agosto de 2023 como desarrollador web en el área TI de República Microfinanzas. Me gusta mucho todo lo que es el desarrollo de software, sobre todo web, tanto front-end como back-end y tengo un buen nivel de inglés. Siempre estoy muy abierto a aprender nuevas tecnologías y enfrentar nuevos desafíos.</p>
+            <p id="perfil"><span id="perfiltit" >Perfil de Tecnólogo en Informática: </span>"Los egresados de la carrera Tecnólogo en Informática serán capaces de construir y evaluar soluciones informáticas abarcando las tareas de diseño y desarrollo de software, pruebas y documentación, integrando eventualmente distintas tecnologías." </p>
 
             <div class="fila">
                 <!-- datos personales -->
                 <div class="col">
-                    <h3>Datos Personales</h3>
+                    <h3 id="datapersonal">Datos Personales</h3>
                     <ul>
                         <li>
                             <strong>Cumpleaños</strong>
@@ -77,7 +80,7 @@
                             Centro
                         </li>
                         <li>
-                            <strong>Cargo</strong>
+                            <strong id="cargo">Cargo</strong>
                             <span>Desarrollador Web</span>
                             <span>Full Stack</span>
                         </li>
@@ -86,25 +89,25 @@
 
                 <!-- intereses -->
                 <div class="col">
-                    <h3>Intereses</h3>
+                    <h3 id="intereses">Intereses</h3>
                     <div class="contenedor-intereses">
                        
                         <div class="interes">
                             <i class="fa-solid fa-headphones"></i>
-                            <span>MUSICA</span>
+                            <span id="musica">MUSICA</span>
                         </div>
                         <div class="interes">
                             <i class="fa-solid fa-plane"></i>
-                            <span>VIAJAR</span>
+                            <span id="viajes" >VIAJAR</span>
                         </div>
                         
                         <div class="interes">
                             <i class="fa-solid fa-person-hiking"></i>
-                            <span>DEPORTE</span>
+                            <span id="deportes">DEPORTE</span>
                         </div>
                         <div class="interes">
                             <i class="fa-solid fa-book"></i>
-                            <span>LIBROS</span>
+                            <span id="libros">LIBROS</span>
                         </div>
                         
                         
@@ -113,9 +116,9 @@
                 </div>
             </div>
             <a style="text-decoration: none" href="img/cv.pdf" download="cv.pdf" >
-            <button >
+            <button id="descargar">
                 
-                Descargar CV <i class="fa-solid fa-download"></i>
+                Download CV <i class="fa-solid fa-download"></i>
                 <span class="overlay"></span>
             </button>
             </a>
@@ -143,7 +146,7 @@
                         <span>Javascript</span>
                         <div class="barra-skill">
                             <div class="progreso">
-                                <span>75%</span>
+                                <span>90%</span>
                             </div>
                         </div>
                     </div>
@@ -168,7 +171,7 @@
                         <span>C#</span>
                         <div class="barra-skill">
                             <div class="progreso">
-                                <span>75%</span>
+                                <span>85%</span>
                             </div>
                         </div>
                     </div>
@@ -178,7 +181,7 @@
                     <h3>Professional Skills</h3>
                     
                     <div class="skill">
-                        <span>Trabajo en Equipo</span>
+                        <span id="equipo">Trabajo en Equipo</span>
                         <div class="barra-skill">
                             <div class="progreso">
                                 <span>90%</span>
@@ -186,7 +189,7 @@
                         </div>
                     </div>
                     <div class="skill">
-                        <span>Creatividad</span>
+                        <span id="creatividad">Creatividad</span>
                         <div class="barra-skill">
                             <div class="progreso">
                                 <span>85%</span>
@@ -194,7 +197,7 @@
                         </div>
                     </div>
                     <div class="skill">
-                        <span>Dedicación</span>
+                        <span id="dedicacion">Dedicación</span>
                         <div class="barra-skill">
                             <div class="progreso">
                                 <span>99%</span>
@@ -203,7 +206,7 @@
                     </div>
 
                     <div class="skill">
-                        <span>Inglés</span>
+                        <span id="ing">Inglés</span>
                         <div class="barra-skill">
                             <div class="progreso">
                                 <span>70%</span>
@@ -211,7 +214,7 @@
                         </div>
                     </div>
                      <div class="skill">
-                        <span>Portugués</span>
+                        <span id="por">Portugués</span>
                         <div class="barra-skill">
                             <div class="progreso">
                                 <span>70%</span>
@@ -222,7 +225,7 @@
                 </div>
             </div>
             <br><br><br>
-            <p style="color: rgb(165, 165, 165)">También he trabajado en proyectos con otras tecnologías o lenguajes de programación como pueden ser: Java, .NET, Genexus, ReactJS, Angular, C++, Python.</p>
+            <p id="extra" style="color: rgb(165, 165, 165)">También he trabajado en proyectos con otras tecnologías o lenguajes de programación como pueden ser: Java, .NET, Genexus, ReactJS, Angular, C++, Python.</p>
 
         </div>
 
@@ -232,15 +235,15 @@
     <!-- SECCION CURRICULUM -->
     <section id="curriculum" class="curriculum">
         <div class="contenido-seccion">
-            <h2>Currículum</h2>
+            <h2 id="cv">Currículum</h2>
             <div class="fila">
                 <div class="col izquierda">
-                    <h3>Educación</h3>
+                    <h3 id="educacion">Educación</h3>
 
                     <div class="item izq">
-                        <h4>Ingeniería en Computación</h4>
+                        <h4 id="titing">Ingeniería en Computación</h4>
                         <span class="casa">FING - Facultad de Ingeniería</span>
-                        <span class="fecha">2024 - Actualidad</span>
+                        <span class="fecha">2024 - </span>
                         
                         <div class="conectori">
                             <div class="circuloi"></div>
@@ -248,10 +251,10 @@
                     </div>
                   
                     <div class="item izq">
-                        <h4>Tecnólogo en Informática</h4>
+                        <h4 id="tittec">Tecnólogo en Informática</h4>
                         <span class="casa">UTEC - Universidad Tecnológica del Uruguay</span>
                         <span class="fecha">2018 - 2022</span>
-                        <p>En UTEC empezamos a trabajar el desarrollo de software de una manera más profesional. Mediante la realización de múltiples proyectos a lo largo de toda la carrera aprendí muchos lenguajes de programación, me acostumbré al trabajo en equipo y logré egresar siendo un desarrollador de software más. </p>
+                        <p id="tecdesc">En UTEC empezamos a trabajar el desarrollo de software de una manera más profesional. Mediante la realización de múltiples proyectos a lo largo de toda la carrera aprendí muchos lenguajes de programación, me acostumbré al trabajo en equipo y logré egresar siendo un desarrollador de software más. </p>
                         <div class="conectori">
                             <div class="circuloi"></div>
                         </div>
@@ -259,20 +262,20 @@
                    
 
                     <div class="item izq">
-                        <h4>Bachillerato en Informática</h4>
+                        <h4 id="titutu">Bachillerato en Informática</h4>
                         <span class="casa">UTU</span>
                         <span class="fecha">2015 - 2017</span>
-                        <p>En este bachillerato comencé a hacer mis primeras armas en el mundo de la informática, viendo mis primeros lenguajes de programación y aprendiendo desde cero lo que es el desarrollo de software. También se trabajaba en otros temas como puede ser reparación de equipos, bases de datos, redes, etc</p>
+                        <p id="utudesc">En este bachillerato comencé a hacer mis primeras armas en el mundo de la informática, viendo mis primeros lenguajes de programación y aprendiendo desde cero lo que es el desarrollo de software. También se trabajaba en otros temas como puede ser reparación de equipos, bases de datos, redes, etc</p>
                         <div class="conectori">
                             <div class="circuloi"></div>
                         </div>
                     </div>
 
                     <div class="item izq">
-                        <h4>Analista Jr. Genexus</h4>
+                        <h4 id="genexustit">Analista Jr. Genexus</h4>
                         <span class="casa">Genexus Training</span>
                         <span class="fecha">2022</span>
-                        <p>En la carrera de Tecnólogo en Informática se nos dió la posibilidad de rendir un exámen de Analista Jr. Genexus, el cuál salvé con el 71% de aprobación </p>
+                        <p id="genexusdesc">En la carrera de Tecnólogo en Informática se nos dió la posibilidad de rendir un exámen de Analista Jr. Genexus, el cuál salvé con el 71% de aprobación </p>
                         <div class="conectori">
                             <div class="circuloi"></div>
                         </div>
@@ -281,33 +284,33 @@
                 </div>
 
                 <div class="col derecha">
-                    <h3>Experiencia de trabajo</h3>
+                    <h3 id="exp">Experiencia de trabajo</h3>
 
                     <div class="item der">
-                        <h4>Desarrollador web</h4>
+                        <h4 id="rmsatit">Desarrollador web</h4>
                         <span class="casa">República Microfinanzas</span>
-                        <span class="fecha">2023 - Act</span>
-                        <p>En agosto de 2023 comencé a trabajar en República Microfinanzas, en un principio ahora como asistente en mesa de ayuda, brindando soporte técnico dentro de la empresa. Ahora me encuentro en el área de desarrollo, colaborando con el diseño y el desarrollo de las distintas aplicaciones web de la empresa.</p>
+                        <span class="fecha">2023 - </span>
+                        <p id="repdesc">En agosto de 2023 comencé a trabajar en República Microfinanzas, en un principio ahora como asistente en mesa de ayuda, brindando soporte técnico dentro de la empresa. Ahora me encuentro en el área de desarrollo, colaborando con el diseño y el desarrollo de las distintas aplicaciones web de la empresa.</p>
                         <div class="conectord">
                             <div class="circulod"></div>
                         </div>
                     </div>
                     
                     <div class="item der">
-                        <h4>Soporte y desarrollo web</h4>
+                        <h4 id="bunkertit">Soporte y desarrollo web</h4>
                         <span class="casa">Bunker360</span>
                         <span class="fecha">2021 - 2023</span>
-                        <p>Bunker360 es una empresa de software, trabajé allí por casi dos años donde mi rol principal era estar pendiente del portal de soporte a clientes y atender los problemas relacionados a los sistemas que la empresa proveía. También realicé algunos trabajos puntuales de desarrollo, utilizando Wordpress, Javascript, SQL, HTML/CSS</p>
+                        <p id="bunkerdesc">Bunker360 es una empresa de software, trabajé allí por casi dos años donde mi rol principal era estar pendiente del portal de soporte a clientes y atender los problemas relacionados a los sistemas que la empresa proveía. También realicé algunos trabajos puntuales de desarrollo, utilizando Wordpress, Javascript, SQL, HTML/CSS</p>
                         <div class="conectord">
                             <div class="circulod"></div>
                         </div>
                     </div>
 
                     <div class="item der">
-                        <h4>Técnico en Reparación de PC</h4>
+                        <h4 id="vegatit">Técnico en Reparación de PC</h4>
                         <span class="casa">Vega Multimedia</span>
                         <span class="fecha">2019 - 2020</span>
-                        <p>Mientras estudiaba, trabajé en Vega Multimedia (una empresa dedicada a la venta de insumos informáticos) a lo largo de todo un año reparando PC, instalando softwares y dando soporte técnico a clientes.</p>
+                        <p id="vegadesc">Mientras estudiaba, trabajé en Vega Multimedia (una empresa dedicada a la venta de insumos informáticos) a lo largo de todo un año reparando PC, instalando softwares y dando soporte técnico a clientes.</p>
                         <div class="conectord">
                             <div class="circulod"></div>
                         </div>
@@ -424,3 +427,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
